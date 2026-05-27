@@ -23,12 +23,12 @@ class Adoption_application extends Model
     ];
 
     public function userCivil() {
-        return $this->belongsTo('App\Models\Usercivil');
+        return $this->belongsTo('App\Models\Usercivil', 'Id_usuarioCivil');
     }
     public function pet() {
-        return $this->belongsTo('App\Models\Pet');
+        return $this->belongsTo('App\Models\Pet', 'Id_mascota');
     }
     public function foundation() {
-        return $this->belongsTo('App\Models\Foundation');
-    }
+        return $this->belongsTo('App\Models\Foundation', 'Id_fundacion');
+    } 
 }

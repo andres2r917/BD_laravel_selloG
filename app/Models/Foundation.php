@@ -26,12 +26,12 @@ class Foundation extends Model
     ];
 
     public function user() {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\User', 'Id_usuario');
     }
     public function pets() {
-        return $this->hasMany('App\Models\Pet');
+        return $this->hasMany('App\Models\Pet', 'Id_fundacion');
     }
     public function adoptionApplications() {
-        return $this->hasMany('App\Models\AdoptionApplication');
+        return $this->hasMany('App\Models\Adoption_application', 'Id_fundacion');
     }
 }

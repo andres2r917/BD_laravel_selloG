@@ -16,4 +16,12 @@ class FoundationController extends Controller
         $foundations = Foundation::where('Nombre_organizacion', 'like', 'Patitas%')->get();
         return $foundations;
     }
+    public function prueba_foundation(){
+    $foundation = Foundation::find(1);
+    return [
+        'foundation' => $foundation,
+        'pets' => $foundation->pets,
+        'adoptionApplications' => $foundation->adoptionApplications,
+    ];
+}
 }

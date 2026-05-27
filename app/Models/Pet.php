@@ -23,9 +23,9 @@ use HasFactory;
     ];
 
     public function foundation() {
-        return $this->belongsTo('App\Models\Foundation');
+        return $this->belongsTo('App\Models\Foundation', 'Id_fundacion');
     }
     public function adoptionApplications() {
-        return $this->hasMany('App\Models\AdoptionApplication');
+        return $this->hasMany('App\Models\Adoption_application', 'Id_mascota');
     }
 }

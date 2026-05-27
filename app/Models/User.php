@@ -50,18 +50,18 @@ class User extends Authenticatable
     ];
 
      public function role() {
-        return $this->belongsTo('App\Models\Role');
+        return $this->belongsTo('App\Models\Role', 'Id_rol');
     }
     public function userCivil() {
-        return $this->hasOne('App\Models\UserCivil');
+        return $this->hasOne('App\Models\UserCivil', 'Id_usuario');
     }
     public function administrator() {
-        return $this->hasOne('App\Models\Administrator');
+        return $this->hasOne('App\Models\Administrator', 'Id_usuario');
     }
     public function foundation() {
-        return $this->hasOne('App\Models\Foundation');
+        return $this->hasOne('App\Models\Foundation', 'Id_usuario');
     }
     public function denunciations() {
-        return $this->hasMany('App\Models\Denunciation');
+        return $this->hasMany('App\Models\Denunciation', 'Id_usuario');
     }
 }

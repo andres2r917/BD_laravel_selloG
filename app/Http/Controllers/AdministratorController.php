@@ -11,4 +11,5 @@ class AdministratorController extends Controller
         $administrators = Administrator::all();
         return $administrators;
     }
+    
 }

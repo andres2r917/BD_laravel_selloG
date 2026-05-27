@@ -38,6 +38,13 @@ Route::get('consulta9', [DenunciationController::class,'consulta9']);
 Route::get('consulta10', [AdoptionApplicationController::class,'consulta10']);
 Route::get('consulta11', [AdoptionApplicationController::class,'consulta11']);
 Route::get('consulta12', [AdministratorController::class,'consulta12']);
+//consultas de prueba para verificar relaciones entre tablas
+Route::get('prueba_pet', [PetController::class, 'prueba_pet']);
+Route::get('prueba_user', [UserController::class, 'prueba_user']);
+Route::get('prueba_usercivil', [UsercivilController::class, 'prueba_usercivil']);
+Route::get('prueba_foundation', [FoundationController::class, 'prueba_foundation']);
+Route::get('prueba_denunciation', [DenunciationController::class, 'prueba_denunciation']);
+Route::get('prueba_application', [AdoptionApplicationController::class, 'prueba_application']);
 
 
 

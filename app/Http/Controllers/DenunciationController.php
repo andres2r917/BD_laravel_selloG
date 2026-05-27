@@ -11,4 +11,12 @@ class DenunciationController extends Controller
         $denunciations = Denunciation::where('Estado_denuncia', 'pendiente')->get();
         return $denunciations;
     }
+    
+    public function prueba_denunciation(){
+        $denunciation = Denunciation::find(1);
+        return [
+            'denunciation' => $denunciation,
+            'userCivil' => $denunciation->userCivil,
+        ];
+    }
 }

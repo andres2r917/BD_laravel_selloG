@@ -15,4 +15,12 @@ class UserController extends Controller
     $users = User::where('Telefono', 'like', '300%')->get();
     return $users;
 }
+  public function prueba_user(){
+    $user = User::find(1);
+    return [
+        "user" => $user,
+        "role" => $user->role,
+        "userCivil" => $user->userCivil,
+    ];
+}
 }

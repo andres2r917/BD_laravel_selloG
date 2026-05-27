@@ -11,4 +11,12 @@ class UsercivilController extends Controller
         $usercivils = Usercivil::find(1);
         return $usercivils;
     }
+
+    public function prueba_usercivil(){
+    $foundation = Foundation::find(1);
+    return [
+        "foundation" => $foundation,
+        "pets" => $foundation->pets,
+    ];
+}
 }

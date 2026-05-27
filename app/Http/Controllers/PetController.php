@@ -14,4 +14,9 @@ class PetController extends Controller
         $pets = Pet::where('Especie','Perro')->first();
         return $pets;
     }
+    public function prueba_pet(){
+    $pets = Pet::with('foundation')->get();
+    return $pets;
+    }
+
 }
